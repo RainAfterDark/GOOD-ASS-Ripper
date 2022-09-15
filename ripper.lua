@@ -45,7 +45,13 @@ local function parse_data()
             if name == "KamisatoAyaka" then return k1 > k2 end
             return k1 < k2 end)
         for i, k in ipairs(tkeys) do talents[i] = talent_map[k]:get() end
-        local burst_index = name == "Mona" and 4 or 3 --why mihoyo why
+        local skill_index = name == "KamisatoAyaka" and 3 or 2
+        local burst_index = name == "KamisatoAyaka" and 2 or (name == "Mona" and 4 or 3) --why mihoyo why
+        --notes: everyone else has talent IDs in ascending order, correspoding to auto, skill and burst respectively
+        --EXCEPT Ayaka and Mona who both have 4 talents instead of the usual 3 (their special dashes)
+        --and Ayaka's are in descending order, corresponding to auto, BURST, SKILL, dash, 
+        --while Mona's are in ascending order, corresponding to auto, skill, DASH, burst
+        --hopefully they're the only exceptions, I'm just too lazy to map out skill depots though I really should...
 
         local avatar_txt = (string.len(characters) > 0 and ",{" or "{")
         .. '"key":"' .. name .. '","level":' .. level
@@ -53,7 +59,7 @@ local function parse_data()
         .. ',"ascension":' .. ascension
         .. ',"talent":{'
             .. '"auto":' .. talents[1]
-            .. ',"skill":' .. talents[2]
+            .. ',"skill":' .. talents[skill_index]
             .. ',"burst":' .. talents[burst_index]
         .. "}}"
         characters = characters .. avatar_txt
