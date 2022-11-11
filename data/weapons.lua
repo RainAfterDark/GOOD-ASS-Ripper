@@ -148,7 +148,7 @@ local weapons = {
 		rarity = 5
 	},
 	[11511] = {
-		key = "KeyOfHierophany",
+		key = "KeyOfKhajNisut",
 		rarity = 5
 	},
 	[12101] = {
@@ -236,7 +236,7 @@ local weapons = {
 		rarity = 4
 	},
 	[12415] = {
-		key = "MaharaAquamarine",
+		key = "MakhairaAquamarine",
 		rarity = 4
 	},
 	[12416] = {
@@ -261,6 +261,10 @@ local weapons = {
 	},
 	[12504] = {
 		key = "TheUnforged",
+		rarity = 5
+	},
+	[12505] = {
+		key = "PrimordialJadeGreatsword",
 		rarity = 5
 	},
 	[12506] = {
@@ -348,7 +352,7 @@ local weapons = {
 		rarity = 4
 	},
 	[13419] = {
-		key = "ShiftingWindblade",
+		key = "MissiveWindspear",
 		rarity = 4
 	},
 	[13501] = {
@@ -495,12 +499,20 @@ local weapons = {
 		key = "MemoryOfDust",
 		rarity = 5
 	},
+	[14505] = {
+		key = "PrimordialJadeRegalia",
+		rarity = 5
+	},
 	[14506] = {
 		key = "EverlastingMoonglow",
 		rarity = 5
 	},
 	[14509] = {
 		key = "KagurasVerity",
+		rarity = 5
+	},
+	[14511] = {
+		key = "AThousandFloatingDreams",
 		rarity = 5
 	},
 	[15101] = {
@@ -617,6 +629,14 @@ local weapons = {
 	},
 	[15503] = {
 		key = "ElegyForTheEnd",
+		rarity = 5
+	},
+	[15504] = {
+		key = "KunwusWyrmbane",
+		rarity = 5
+	},
+	[15505] = {
+		key = "PrimordialJadeVista",
 		rarity = 5
 	},
 	[15506] = {
