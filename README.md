@@ -4,11 +4,10 @@ Player data ripper to GOOD format for certain anime game with Akebi-Sniffer-Scri
 ## Usage
 - Setting up Akebi and Sniffer
   - `git clone https://github.com/RainAfterDark/GOOD-ASS-Ripper.git`
-  - Build [Akebi](https://github.com/Akebi-Group/Akebi-GC) or get the latest artifact from their [actions](https://github.com/Akebi-Group/Akebi-GC/actions).
+  - Get the latest release of [Akebi](https://github.com/Akebi-Group/Akebi-GC).
   - Build my fork of [Akebi-Sniffer](https://github.com/RainAfterDark/Akebi-PacketSniffer) or download my [unofficial release](https://github.com/RainAfterDark/Akebi-PacketSniffer/releases). (until my [PR](https://github.com/Akebi-Group/Akebi-PacketSniffer/pull/10) gets merged)
-  - Highly recommend getting protos from [Sorapointa's](https://github.com/Sorapointa/Sorapointa-Protos) even if you have your own (your fields or enum names may be different).
   - After injecting the game with Akebi, open the menu, go to settings, and all the way down, turn on "Capturing".
-  - Open up the sniffer, set-up your protos and load the script `ripper.lua` from wherever you may have placed it. A simple video tutorial for setting up the sniffer should be in the repo's README.
+  - Open up the sniffer, set-up your protos (you can get [Sorapointa's](https://github.com/Sorapointa/Sorapointa-Protos)) and load the script `ripper.lua` from wherever you may have placed it. A simple video tutorial for setting up the sniffer should be in the repo's README.
 
 - Using the script
   - Modify the item filters in `ripper.lua` to your needs.
