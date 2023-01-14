@@ -192,7 +192,7 @@ function on_filter(packet)
     local pid = packet:mid()
 
     --PlayerStoreNotify
-    if pid == 672 then
+    if pid == 679 then
         if player_store then return true end
         local node = packet:content():node()
         local list = node:field("item_list"):value():get()
@@ -207,7 +207,7 @@ function on_filter(packet)
         return true
 
     --AvatarDataNotify
-    elseif pid == 1633 then
+    elseif pid == 1607 then
         if avatar_data then return true end
         local node = packet:content():node()
         local list = node:field("avatar_list"):value():get()
@@ -216,6 +216,10 @@ function on_filter(packet)
         for _, a in ipairs(list) do
             local avatar = a:get()
             local id = avatar:field("avatar_id"):value():get()
+            -- Print error if new character is not defined in the table
+            if avatar_names[id] == nil then
+                print("Unknown avatar id " .. id)
+            end
             local name = avatar_names[id]
             local equips = avatar:field("equip_guid_list"):value():get()
             for _, e in ipairs(equips) do
